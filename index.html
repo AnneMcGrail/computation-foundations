@@ -6,6 +6,16 @@ layout: default
 <div class="text-center my-5">
 
 <h1 class="text-center my-5">{{site.title}}</h1>
+    
+    <h3>Pets available: {{ pets.size }}</h3>
+    
+    <h3>Dogs available: {{ pets | where: 'type', 'dog' | size }}</h3>
+    
+    <h3>Cats available: {{ pets | where: 'type', 'cat' | size }}</h3>
+    
+    <h3>Parrots available: {{ pets | where: 'type', 'parrot' | size }}</h3>
+    
+    <h3>Pets available: {{ pets.size }} ({{ pets | where: 'type', 'dog' | size }} dogs, {{ pets | where: 'type', 'cat' | size }} cats, and {{ pets | where: 'type', 'parrot' | size }} parrot)</h3>
 
 </div>
 
